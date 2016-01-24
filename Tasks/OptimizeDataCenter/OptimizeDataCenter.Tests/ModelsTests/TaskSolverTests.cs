@@ -11,7 +11,7 @@ namespace TaskTemplate.Tests
         {
             var solver = new TaskSolver();
 
-            var result = solver.GetOutputData(new InputDataModel());
+            var result = solver.GetOutputData(new InputData());
 
             Assert.IsNotNull(result);
         }

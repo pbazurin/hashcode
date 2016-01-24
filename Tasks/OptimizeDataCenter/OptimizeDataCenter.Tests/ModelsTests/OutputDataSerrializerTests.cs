@@ -11,7 +11,7 @@ namespace TaskTemplate.Tests.ModelsTests
         {
             var serr = new OutputDataSerrializer();
 
-            var output = serr.GetSerrializedOutput(new OutputDataModel());
+            var output = serr.GetSerrializedOutput(new OutputData());
 
             Assert.IsNotNull(output);
         }

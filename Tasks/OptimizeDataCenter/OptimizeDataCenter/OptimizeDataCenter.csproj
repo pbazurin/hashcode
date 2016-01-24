@@ -60,10 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\InputDataModel.cs" />
+    <Compile Include="Models\Coordinate.cs" />
+    <Compile Include="Models\InputData.cs" />
     <Compile Include="Models\InputDataParser.cs" />
-    <Compile Include="Models\OutputDataModel.cs" />
+    <Compile Include="Models\OutputData.cs" />
     <Compile Include="Models\OutputDataSerrializer.cs" />
+    <Compile Include="Models\Server.cs" />
     <Compile Include="Models\TaskSolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

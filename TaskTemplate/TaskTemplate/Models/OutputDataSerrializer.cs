@@ -2,7 +2,7 @@
 {
     public class OutputDataSerrializer
     {
-        public string GetSerrializedOutput(OutputDataModel model)
+        public string GetSerrializedOutput(OutputData outputData)
         {
             return "Some output data\nNew line\n";
         }

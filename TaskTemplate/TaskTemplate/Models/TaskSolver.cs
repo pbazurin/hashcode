@@ -2,9 +2,9 @@
 {
     public class TaskSolver
     {
-        public OutputDataModel GetOutputData(InputDataModel inputData)
+        public OutputData GetOutputData(InputData inputData)
         {
-            return new OutputDataModel();
+            return new OutputData();
         }
     }
 }

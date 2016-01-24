@@ -2,11 +2,11 @@
 {
     public class InputDataParser
     {
-        public InputDataModel GetParsedModel(string input)
+        public InputData GetParsedModel(string input)
         {
             // TODO: add imlementation
 
-            return new InputDataModel();
+            return new InputData();
         }
     }
 }

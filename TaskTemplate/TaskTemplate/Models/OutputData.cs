@@ -1,6 +1,6 @@
 ﻿namespace TaskTemplate.Models
 {
-    public class InputDataModel
+    public class OutputData
     {
         // TODO: add properties
     }
