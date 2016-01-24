@@ -4,7 +4,14 @@
     {
         public OutputData GetOutputData(InputData inputData)
         {
-            return new OutputData();
+            var result = new OutputData
+            {
+                Servers = inputData.Servers
+            };
+
+            // TODO: add some logic here
+
+            return result;
         }
     }
 }

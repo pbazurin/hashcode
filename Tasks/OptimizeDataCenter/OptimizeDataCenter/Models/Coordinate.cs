@@ -4,6 +4,6 @@
     {
         public int RowNumber { get; set; }
 
-        public bool SlotNumber { get; set; }
+        public int SlotNumber { get; set; }
     }
 }

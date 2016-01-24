@@ -1,2 +1,5 @@
-Some output data
-New line
+x
+x
+x
+x
+x

@@ -1,6 +1,6 @@
 ﻿namespace TaskTemplate.Models
 {
-    public class OutputDataSerrializer
+    public class OutputDataSerializer
     {
         public string GetSerrializedOutput(OutputData outputData)
         {

@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.IO;
 using TaskTemplate.Models;
 
@@ -18,9 +19,11 @@ namespace TaskTemplate
             var inputData = new InputDataParser().GetParsedModel(input);
 
             var outputData = new TaskSolver().GetOutputData(inputData);
-            var output = new OutputDataSerrializer().GetSerrializedOutput(outputData);
+            var output = new OutputDataSerializer().GetSerrializedOutput(outputData);
 
             File.WriteAllText(outputDataPath, output);
+
+            Console.Write(output);
         }
     }
 }
