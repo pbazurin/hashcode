@@ -29,7 +29,7 @@ namespace Painting.Models.Commands
         {
             if (StartPoint.RowNumber == EndPoint.RowNumber)
             {
-                for (var i = StartPoint.ColumnNumber; i < EndPoint.ColumnNumber; i++)
+                for (var i = StartPoint.ColumnNumber; i <= EndPoint.ColumnNumber; i++)
                 {
                     if(_map[StartPoint.RowNumber, i])
                     {
@@ -41,7 +41,7 @@ namespace Painting.Models.Commands
             }
             else
             {
-                for (var i = StartPoint.RowNumber; i < EndPoint.RowNumber; i++)
+                for (var i = StartPoint.RowNumber; i <= EndPoint.RowNumber; i++)
                 {
                     if (_map[i, StartPoint.ColumnNumber])
                     {
@@ -57,7 +57,7 @@ namespace Painting.Models.Commands
         {
             if (StartPoint.RowNumber == EndPoint.RowNumber)
             {
-                for (var i = StartPoint.ColumnNumber; i < EndPoint.ColumnNumber; i++)
+                for (var i = StartPoint.ColumnNumber; i <= EndPoint.ColumnNumber; i++)
                 {
                     if (!_map[StartPoint.RowNumber, i])
                     {
@@ -69,7 +69,7 @@ namespace Painting.Models.Commands
             }
             else
             {
-                for (var i = StartPoint.RowNumber; i < EndPoint.RowNumber; i++)
+                for (var i = StartPoint.RowNumber; i <= EndPoint.RowNumber; i++)
                 {
                     if (!_map[i, StartPoint.ColumnNumber])
                     {
