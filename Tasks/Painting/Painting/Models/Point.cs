@@ -2,8 +2,8 @@
 {
     public class Point
     {
-        public uint ColumnNumber { get; set; }
+        public int ColumnNumber { get; set; }
 
-        public uint RowNumber { get; set; }
+        public int RowNumber { get; set; }
     }
 }

@@ -18,12 +18,16 @@ namespace Painting
             var input = File.ReadAllText(inputDataPath);
             var inputData = new InputDataParser().GetParsedModel(input);
 
-            var outputData = new TaskSolver().GetOutputData(inputData);
+            var taskSolver = new TaskSolver();
+            var outputData = taskSolver.GetOutputData(inputData);
             var output = new OutputDataSerializer().GetSerializedOutput(outputData);
 
             File.WriteAllText(outputDataPath, output);
 
             Console.Write(output);
+
+            Console.WriteLine();
+            Console.WriteLine(string.Format("Score: {0}", taskSolver.GetScore(inputData, outputData)));
         }
     }
 }
