@@ -4,14 +4,6 @@ namespace Painting.Models.Commands
 {
     public class EraseCellCommand : Command
     {
-        public EraseCellCommand() : base()
-        {
-        }
-
-        public EraseCellCommand(bool[,] map) : base(map)
-        {
-        }
-
         public Point CellPoint { get; set; }
 
         public override string ToString()
@@ -21,22 +13,22 @@ namespace Painting.Models.Commands
 
         public override void Do()
         {
-            if (!_map[CellPoint.RowNumber, CellPoint.ColumnNumber])
+            if (!Map[CellPoint.RowNumber, CellPoint.ColumnNumber])
             {
                 throw new InvalidOperationException();
             }
 
-            _map[CellPoint.RowNumber, CellPoint.ColumnNumber] = false;
+            Map[CellPoint.RowNumber, CellPoint.ColumnNumber] = false;
         }
 
         public override void Undo()
         {
-            if(_map[CellPoint.RowNumber, CellPoint.ColumnNumber])
+            if(Map[CellPoint.RowNumber, CellPoint.ColumnNumber])
             {
                 throw new InvalidOperationException();
             }
 
-            _map[CellPoint.RowNumber, CellPoint.ColumnNumber] = true;
+            Map[CellPoint.RowNumber, CellPoint.ColumnNumber] = true;
         }
     }
 }

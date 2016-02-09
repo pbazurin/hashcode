@@ -22,6 +22,9 @@ namespace Painting
             var outputData = taskSolver.GetOutputData(inputData);
             var output = new OutputDataSerializer().GetSerializedOutput(outputData);
 
+            // Makes input data from output to check is it the same
+            //var output = new OutputDataSerializer().GetSerrializedInput(inputData, outputData);
+
             File.WriteAllText(outputDataPath, output);
 
             Console.Write(output);

@@ -5,6 +5,7 @@ namespace Painting.Models
     public class InputDataParser
     {
         public const char CellToBePaintedChar = '#';
+        public const char CellBlankChar = '.';
 
         public InputData GetParsedModel(string input)
         {

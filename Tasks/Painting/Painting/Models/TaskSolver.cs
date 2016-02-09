@@ -35,8 +35,9 @@ namespace Painting.Models
 
         private Command GetBestCommandForPaintedCell(InputData inputData, int rowNumber, int columnNumber)
         {
-            var command = new PaintLineCommand(inputData.Map)
+            var command = new PaintLineCommand
             {
+                Map = inputData.Map,
                 StartPoint = new Point
                 {
                     RowNumber = rowNumber,

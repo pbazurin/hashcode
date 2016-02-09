@@ -4,17 +4,7 @@ namespace Painting.Models.Commands
 {
     public abstract class Command
     {
-        protected bool[,] _map;
-
-        public Command()
-        {
-            _map = new bool[0, 0];
-        }
-
-        public Command(bool[,] map)
-        {
-            _map = map;
-        }
+        public bool[,] Map { get; set; }
 
         public virtual void Do()
         {

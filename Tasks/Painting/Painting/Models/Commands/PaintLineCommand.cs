@@ -4,14 +4,6 @@ namespace Painting.Models.Commands
 {
     public class PaintLineCommand : Command
     {
-        public PaintLineCommand() : base()
-        {
-        }
-
-        public PaintLineCommand(bool[,] map) : base(map)
-        {
-        }
-
         public Point StartPoint { get; set; }
 
         public Point EndPoint { get; set; }
@@ -31,24 +23,24 @@ namespace Painting.Models.Commands
             {
                 for (var i = StartPoint.ColumnNumber; i <= EndPoint.ColumnNumber; i++)
                 {
-                    if(_map[StartPoint.RowNumber, i])
+                    if(Map[StartPoint.RowNumber, i])
                     {
                         throw new InvalidOperationException();
                     }
 
-                    _map[StartPoint.RowNumber, i] = true;
+                    Map[StartPoint.RowNumber, i] = true;
                 }
             }
             else
             {
                 for (var i = StartPoint.RowNumber; i <= EndPoint.RowNumber; i++)
                 {
-                    if (_map[i, StartPoint.ColumnNumber])
+                    if (Map[i, StartPoint.ColumnNumber])
                     {
                         throw new InvalidOperationException();
                     }
 
-                    _map[i, StartPoint.ColumnNumber] = true;
+                    Map[i, StartPoint.ColumnNumber] = true;
                 }
             }
         }
@@ -59,24 +51,24 @@ namespace Painting.Models.Commands
             {
                 for (var i = StartPoint.ColumnNumber; i <= EndPoint.ColumnNumber; i++)
                 {
-                    if (!_map[StartPoint.RowNumber, i])
+                    if (!Map[StartPoint.RowNumber, i])
                     {
                         throw new InvalidOperationException();
                     }
 
-                    _map[StartPoint.RowNumber, i] = false;
+                    Map[StartPoint.RowNumber, i] = false;
                 }
             }
             else
             {
                 for (var i = StartPoint.RowNumber; i <= EndPoint.RowNumber; i++)
                 {
-                    if (!_map[i, StartPoint.ColumnNumber])
+                    if (!Map[i, StartPoint.ColumnNumber])
                     {
                         throw new InvalidOperationException();
                     }
 
-                    _map[i, StartPoint.ColumnNumber] = false;
+                    Map[i, StartPoint.ColumnNumber] = false;
                 }
             }
         }

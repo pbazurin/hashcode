@@ -4,14 +4,6 @@ namespace Painting.Models.Commands
 {
     public class PaintSquareCommand : Command
     {
-        public PaintSquareCommand() : base()
-        {
-        }
-
-        public PaintSquareCommand(bool[,] map) : base(map)
-        {
-        }
-
         public Point Center { get; set; }
 
         public uint Radius { get; set; }
@@ -32,12 +24,12 @@ namespace Painting.Models.Commands
             {
                 for (var j = Center.ColumnNumber - Radius; i < Center.ColumnNumber + Radius; i++)
                 {
-                    if (_map[i, j])
+                    if (Map[i, j])
                     {
                         throw new InvalidOperationException();
                     }
 
-                    _map[i, j] = true;
+                    Map[i, j] = true;
                 }
             }
         }
@@ -53,12 +45,12 @@ namespace Painting.Models.Commands
             {
                 for (var j = Center.ColumnNumber - Radius; i < Center.ColumnNumber + Radius; i++)
                 {
-                    if (!_map[i, j])
+                    if (!Map[i, j])
                     {
                         throw new InvalidOperationException();
                     }
 
-                    _map[i, j] = false;
+                    Map[i, j] = false;
                 }
             }
         }
